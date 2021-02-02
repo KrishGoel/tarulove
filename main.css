@@ -1,0 +1,160 @@
+:root {
+    --head-font: 'Poppins', sans-serif;;
+	--body-font: 'Poppins', sans-serif;
+	--cyan: #7CEDCE;
+	--pink: #FF3CA5;
+	--yellow: #FFE167;
+	--grey: #474749;
+	--orange: #FFA55B;
+	--white: rgb(240, 240, 240);
+	--box-shadow: 20px 30px 40px -25px rgb(180, 180, 180);
+}
+
+*, html, body {
+    padding: 0;
+    margin: 0
+}
+
+/* Font sizing */
+
+h1, h1 a {
+	font-size: calc(1.355rem + 1.26vw);
+}
+@media (min-width: 1200px) {
+	h1, h1 a {
+		font-size: 2.3rem;
+	}
+}
+
+h2, h2 a {
+	font-size: calc(1.295rem + 0.54vw);
+}
+@media (min-width: 1200px) {
+	h2,	h2 a {
+		font-size: 1.7rem;
+	}
+}
+
+h3, h3 a {
+	font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+	h3,	h3 a {
+		font-size: 1.5rem;
+	}
+}
+
+h4, h4 a {
+	font-size: 1.2rem;
+}
+h5, h5 a {
+	font-size: 0.9rem;
+}
+h6, h6 a {
+	font-size: 1rem;
+}
+
+p, p a, a {
+	font-size: 0.9rem;
+}
+p a {
+	font-weight: 600;
+}
+
+/* Base styling */
+
+body {
+	font-family: var(--body-font);
+	color: var(--grey);
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--head-font);
+	letter-spacing: -1px;
+}
+
+a {
+	box-shadow: inset 0 -5px 0 var(--yellow);
+	transition: 0.2s;
+	padding: 0 5px;
+	margin-left: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--grey)
+}
+a:hover {
+	box-shadow: inset 0 -25px 0 var(--pink);
+	color: var(--white)
+}
+
+/* Structural */
+
+.width-restriction {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+/* Nav bar */
+
+nav {
+	background-color: #ffffff;
+	padding: 3px 0;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	position: sticky;
+	top: 0;
+	z-index: 5
+}
+
+ nav .width-restriction{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+ }
+
+ /* Carousel styling */
+.carousel {
+	/* max-width: 800px; */
+	margin: 0 auto;
+}
+
+ img {
+	width: 100%;
+	border-radius: 20px;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+ }
+
+ /* Info styling */
+ .col-container {
+	 display: grid;
+	 grid-template-columns: repeat(2, 1fr);
+ }
+
+.col-2 {
+	grid-column: span 1;
+	margin: 0 auto;
+}
+.col-2 img {
+	width: 90%
+}
+@media screen and (max-width: 700px) {
+	.col-2 {
+		grid-column: span 2;
+	}
+	.col-2 img {
+		width: 100%
+	}
+}
+
+.card {
+	border-radius: 20px;
+	padding: 15px;
+	/* background-color: var(--orange); */
+	color: var(--white);
+	/* margin: 20px 0; */
+}
